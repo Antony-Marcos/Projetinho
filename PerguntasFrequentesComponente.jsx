@@ -42,7 +42,7 @@ function PerguntasFrequentes() {
       <NavBar />
       <div className="h-screen flex flex-col items-center justify-center px-4 py-8 bg-left">
         <h1 className="font-bold text-black text-5xl mb-8 text-center">Perguntas Frequentes</h1>
-        <div className="flex flex-col items-center gap-6 w-full max-w-[600px]">
+        <div className="flex flex-col items-center gap-9 w-full max-w-[600px]">
           {faqData.map((item, index) => (
             <div key={index} className="w-full">
               <button 
