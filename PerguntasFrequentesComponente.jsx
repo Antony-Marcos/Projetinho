@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
+import { PlusIcon } from '@heroicons/react/24/outline'; 
 
 function PerguntasFrequentes() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -9,7 +10,6 @@ function PerguntasFrequentes() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Array de objetos com perguntas e respostas
   const faqData = [
     {
       question: "Como o sistema de gestão de atendimento pode beneficiar minha empresa?",
@@ -48,7 +48,8 @@ function PerguntasFrequentes() {
               <button 
                 onClick={() => handleToggle(index)}
                 className="bg-white p-4 w-full flex items-center justify-between font-bold text-lg text-black rounded-lg border-4 border-gray-900 duration-300">
-                {item.question}
+                <span>{item.question}</span>
+                <PlusIcon className="h-6 w-6 text-green-600" />
               </button>
               {openIndex === index && (
                 <div className="mt-2 p-4 border-t-2 border-gray-300 w-full text-center">
